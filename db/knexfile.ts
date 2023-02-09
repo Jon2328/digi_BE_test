@@ -1,6 +1,6 @@
 import { Knex } from "knex";
 import * as dotenv from 'dotenv'
-dotenv.config({ path: '.env' })
+dotenv.config({path: __dirname + '/../.env'})
 const config: Knex.Config = {
   client: process.env.DB_CLIENT,
   connection: {
@@ -17,5 +17,6 @@ const config: Knex.Config = {
   }
 }
 console.log(config)
+console.log({path:__dirname+'/../.env'})
 
 export = config
