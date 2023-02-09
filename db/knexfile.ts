@@ -16,5 +16,6 @@ const config: Knex.Config = {
     loadExtensions: ['.ts']
   }
 }
+console.log(config)
 
 export = config
