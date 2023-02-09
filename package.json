@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "email-validator": "^2.0.4",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "knex": "^2.4.2",
+    "pg": "^8.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "dotenv": "^16.0.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "dev": "ts-node-dev index.ts",
+    "build": "tsc",
+    "migrate:make": "knex --cwd ./db migrate:make",
+    "migrate:latest": "knex --cwd ./db migrate:latest",
+    "migrate:rollback": "knex --cwd ./db migrate:rollback"
+  }
+}

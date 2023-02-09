@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "removeComments": true,
+    "outDir": "dist",
+    "esModuleInterop": true
+  },
+  "include": ["index.ts", "routes/**/*.ts"],
+}
