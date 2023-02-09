@@ -50,7 +50,7 @@ router.post('/register', async (req, res) => {
     res.json({Status: 'Successful'})
   } catch (err) {
     console.log(err)
-    res.status(400).send(err.message)
+    res.status(400).json({err: err.message})
   }
 })
 
@@ -101,7 +101,7 @@ router.post('/login', async (req, res) => {
     res.json({Status: 'Successful', token: token})
   } catch (err) {
     console.log(err)
-    res.status(400).send(err.message)
+    res.status(400).json({err: err.message})
   }
 })
 
@@ -122,7 +122,7 @@ router.get('/getUser/name', auth, async (req, res) => {
     return res.json(result)
   } catch (err) {
     console.log(err)
-    res.status(400).send(err.message)
+    res.status(400).json({err: err.message})
   }
 })
 
