@@ -16,7 +16,5 @@ const config: Knex.Config = {
     loadExtensions: ['.ts']
   }
 }
-console.log(config)
-console.log({path:__dirname+'/../.env'})
 
 export = config
