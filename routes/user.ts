@@ -105,7 +105,7 @@ router.post('/login', async (req, res) => {
   }
 })
 
-router.get('/getUser/name', async (req, res) => {
+router.get('/getUser/name', auth, async (req, res) => {
   try {
     const queryParam = req.query
     if (!queryParam.name) {
