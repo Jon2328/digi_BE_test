@@ -11,6 +11,6 @@ export default async(req, res, next) => {
     return next()
   } catch(err) {
     console.log(err)
-    return res.status(400).json({Error: 'Unauthorized'})
+    return res.status(400).json({err: 'Unauthorized'})
   }
 }
