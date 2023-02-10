@@ -36,6 +36,16 @@ router.post('/register', async (req, res) => {
       throw new Error('Email is invalid')
     }
 
+    // Check email is already registered
+    const existingUser = await req.db('user')
+    .select('user.*')
+    .where('email', '=', payload.email)
+    .first()
+
+    if (existingUser) {
+      throw new Error('User already registered')
+    }
+
     // Hash password
     const hashedPassword = await bcrypt.hash(payload.password, saltRounds)
 
