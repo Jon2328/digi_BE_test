@@ -16,5 +16,6 @@ JWT_SECRET=secret
 ## Usage
 ```bash
 yarn
+yarn migrate:latest
 yarn dev
 ```
