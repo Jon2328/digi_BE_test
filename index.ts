@@ -1,6 +1,7 @@
 import express from 'express';
 import * as dotenv from 'dotenv'
 import knexConfig from './db/config'
+import path from 'path'
 
 dotenv.config()
 
@@ -16,6 +17,10 @@ app.use(express.json())
 
 app.get('/', (req, res) => {
   res.send('Hello')
+})
+
+app.use('/doc', (req, res) => {
+  res.sendFile(path.join(__dirname, '/html/doc.html'));
 })
 
 app.use('/user', require('./routes/user'))

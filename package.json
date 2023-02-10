@@ -17,6 +17,7 @@
     "dev": "ts-node-dev index.ts",
     "build": "tsc",
     "build-env": "cp .env ./dist/.env && tsc",
+    "build-all": "cp .env ./dist/.env && cp -r html ./dist/html && tsc",
     "migrate:make": "knex --cwd ./db migrate:make",
     "migrate:latest": "knex --cwd ./db migrate:latest",
     "migrate:rollback": "knex --cwd ./db migrate:rollback"
